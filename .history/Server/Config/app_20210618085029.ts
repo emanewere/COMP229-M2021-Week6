@@ -76,8 +76,8 @@ passport.use(User.createStrategy());
 
 
 //Serialize and deserialize user data
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+passport.serializeUser(user.serializeUser());
+passport.deserializeUser()user.deserializeUser();
 
 // create routing through event handling
 app.use('/', indexRouter);
