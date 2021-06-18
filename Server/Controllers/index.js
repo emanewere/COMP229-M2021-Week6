@@ -23,20 +23,27 @@ function DisplayContactPage(req, res, next) {
 exports.DisplayContactPage = DisplayContactPage;
 function DisplayLoginPage(req, res, next) {
     if (!req.user) {
-        res.render('index', { title: 'Login', page: 'login', messages: req.flash('loginMessage') });
+        return res.render('index', { title: 'Login', page: 'login', messages: req.flash('loginMessage') });
     }
+    return res.redirect('/clothing-list');
 }
 exports.DisplayLoginPage = DisplayLoginPage;
 function ProcessLoginPage(req, res, next) {
 }
 exports.ProcessLoginPage = ProcessLoginPage;
 function DisplayRegisterPage(req, res, next) {
+    if (!req.user) {
+        return res.render('index', { title: 'Register', page: 'register', messages: req.flash('registerMessage') });
+    }
+    return res.redirect('/clothing-list');
 }
 exports.DisplayRegisterPage = DisplayRegisterPage;
 function ProcessRegisterPage(req, res, next) {
 }
 exports.ProcessRegisterPage = ProcessRegisterPage;
 function ProcessLogoutPage(req, res, next) {
+    req.logout();
+    return res.redirect('login');
 }
 exports.ProcessLogoutPage = ProcessLogoutPage;
 //# sourceMappingURL=index.js.map
