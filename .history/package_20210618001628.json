@@ -1,10 +1,10 @@
 {
-  "name": "comp229-m2021-week6",
-  "version": "0.0.4",
+  "name": "comp229-m2021-week5",
+  "version": "0.0.3",
   "private": true,
-  "description": "Demo Project for COMP229 - Week 6",
+  "description": "Demo Project for COMP229 - Week 5",
   "main": "index.js",
-  "repository": "https://github.com/CentennialCollege/COMP229-M2021-Week6.git",
+  "repository": "https://github.com/CentennialCollege/COMP229-M2021-Week5d.git",
   "author": "Tom Tsiliopoulos <tsiliopoulos@hotmail.com>",
   "license": "MIT",
   "scripts": {
